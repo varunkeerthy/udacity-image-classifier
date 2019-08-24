@@ -46,17 +46,52 @@ def get_pet_labels(image_dir):
     # Fix filename_list to pop out config files that has file names starts with dot
     filename_list = list(filter(lambda name: not(name.startswith('.')), filename_list))
 
-    # get_labels method assembles list of label names based on file names list
-    def get_labels(filename_list):
-        labels_list = []
-        for filename in filename_list:
+
+    def filename_with_underscore(filename, labels_list):
+        """
+        Method to process filenames containing underscores
+        Parameters:
+            filename - From the list of filenames
+            labels_list - List under construction for labels
+        Returns:
+            labels_list
+        """
+        if "_" in filename:
             pet_full_name = filename.lower().split("_")
             pet_name = ""
             for word in pet_full_name:
+                # Now call to check if the word contains str with dot extension
+                word = filename_with_extension(word)
                 if word.isalpha():
                     pet_name += word + " "
             pet_name = pet_name.strip()
             labels_list.append(pet_name)
+        return labels_list
+
+    def filename_with_extension(filename):
+        """
+        Method to process filenames containing extensions
+        Parameters:
+            filename - From the list of filenames
+        Returns:
+            filename - Processed filename without extension
+        """
+        pet_full_name = ""
+        if "." in filename:
+            pet_full_name = filename.lower().split(".")[0]
+        else:
+            pet_full_name = filename
+        return pet_full_name
+
+    def get_labels(filename_list):
+        labels_list = []
+        for filename in filename_list:
+            if "_" in filename:
+                # Now call utility to process str with underscores
+                filename_with_underscore(filename,labels_list)
+            else:
+                pet_full_name =filename_with_extension(filename)
+                labels_list.append(pet_full_name)
         return labels_list
 
     # get_labels method assembles list of label names based on file names list
@@ -69,5 +104,6 @@ def get_pet_labels(image_dir):
         return results_dic
 
     results_dic = pet_dict_assembler(filename_list,get_labels(filename_list))
+
     #print("Value of results_dic in get_pet_labels module is : {}".format(results_dic))
     return results_dic
