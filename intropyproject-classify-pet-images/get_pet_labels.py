@@ -43,6 +43,9 @@ def get_pet_labels(image_dir):
     results_dic = {}
     filename_list = listdir(image_dir)
 
+    # Fix filename_list to pop out config files that has file names starts with dot
+    filename_list = list(filter(lambda name: not(name.startswith('.')), filename_list))
+
     # get_labels method assembles list of label names based on file names list
     def get_labels(filename_list):
         labels_list = []
