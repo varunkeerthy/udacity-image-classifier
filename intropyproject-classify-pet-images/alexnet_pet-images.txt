@@ -368,11 +368,17 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
-Number of images: 40
+Number of images-->: 40
 Number of Dog images: 30
 Number of Not-a Dog images: 10
 Percentage of correct Dogs: 100.0
 Percentage of correct breed: 80.0
 Percentage of correct not-a dog: 100.0
+MisClassifed Breed's image name is ['Beagle_01170.jpg'] with classified label as walker hound, walker foxhound
+MisClassifed Breed's image name is ['Boston_terrier_02285.jpg'] with classified label as basenji
+MisClassifed Breed's image name is ['Beagle_01141.jpg'] with classified label as english foxhound
+MisClassifed Breed's image name is ['Golden_retriever_05182.jpg'] with classified label as tibetan mastiff
+MisClassifed Breed's image name is ['Great_pyrenees_05367.jpg'] with classified label as kuvasz
+MisClassifed Breed's image name is ['Golden_retriever_05257.jpg'] with classified label as afghan hound, afghan
 
 ** Total Elapsed Runtime: 0:0:2

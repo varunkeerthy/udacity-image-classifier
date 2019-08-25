@@ -368,11 +368,15 @@ Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
-Number of images: 40
+Number of images-->: 40
 Number of Dog images: 30
 Number of Not-a Dog images: 10
 Percentage of correct Dogs: 100.0
 Percentage of correct breed: 90.0
 Percentage of correct not-a dog: 90.0
+MisClassifed Dog's image name is ['cat_01.jpg'] with classified label as norwegian elkhound, elkhound
+MisClassifed Breed's image name is ['Beagle_01170.jpg'] with classified label as walker hound, walker foxhound
+MisClassifed Breed's image name is ['Golden_retriever_05182.jpg'] with classified label as leonberg
+MisClassifed Breed's image name is ['Great_pyrenees_05367.jpg'] with classified label as kuvasz
 
 ** Total Elapsed Runtime: 0:0:3
